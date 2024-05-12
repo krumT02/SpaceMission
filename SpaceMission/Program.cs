@@ -124,7 +124,7 @@ namespace SpaceMission
             foreach (var location in choices.Select(choice => locations[choice - 1]))
             {
                 List<WeatherForecast> locationForecasts = allForecasts.Where(f => f.Location == location).ToList();
-                WeatherCriteria criteriaForLocation = spaceportCriteria[location]; // Make sure this is defined and accessible
+                WeatherCriteria criteriaForLocation = spaceportCriteria[location]; 
 
                 WeatherForecast bestDayForLocation = analyzer.FindBestLaunchDay(locationForecasts, criteriaForLocation);
 
@@ -179,7 +179,7 @@ namespace SpaceMission
             }
             else
             {
-                // Return default criteria or handle the case where the file doesn't exist
+                
                 return new Dictionary<string, WeatherCriteria>();
             }
         }
