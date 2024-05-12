@@ -48,7 +48,7 @@ namespace SpaceMission.Helper
                 WeatherCriteria criteria = spaceportCriteria[selectedSpaceport];
                 Console.WriteLine(rm.GetString("UpdatingCriteria", ci) + selectedSpaceport);
                 UpdateCriteria(criteria);
-                Console.WriteLine("Save to file y/n?");
+                Console.WriteLine(rm.GetString("SaveFile",ci));
                 string answear = Console.ReadLine();
                 if(answear == "y") 
                 SaveCriteriaToFile(spaceportCriteria);

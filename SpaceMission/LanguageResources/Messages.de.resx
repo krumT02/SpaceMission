@@ -204,6 +204,9 @@
   <data name="RecipientEmail" xml:space="preserve">
     <value>Geben Sie die E-Mail-Adresse des Empfängers ein:</value>
   </data>
+  <data name="SaveFile" xml:space="preserve">
+    <value>Datei speichern</value>
+  </data>
   <data name="SenderEmail" xml:space="preserve">
     <value>Geben Sie die E-Mail-Adresse des Absenders ein:</value>
   </data>
