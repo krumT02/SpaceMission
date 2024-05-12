@@ -90,7 +90,9 @@ namespace SpaceMission
                             && (criteria.AllowLightning || f.Lightning == "No")
                             && (criteria.AllowedCloudTypes.Count == 0 || criteria.AllowedCloudTypes.Contains(f.Clouds)))
                 .OrderBy(f => locationPriority[f.Location]) // Prioritize by location
-                .ThenBy(f => f.Day) // Then by day
+                .ThenBy(f => f.WindSpeed) // Then prioritize by the lowest windSpeed
+                .ThenBy(f => f.Humidity) // Then prioritize by the lowest humidity
+                .ThenBy(f => f.Day) // Next by the earliest suitable day
                 .FirstOrDefault();
 
             return suitableDay;

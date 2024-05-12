@@ -7,6 +7,7 @@ using CsvHelper.Configuration.Attributes;
 using System.Resources;
 using SpaceMission.WeatherClasses;
 using SpaceMission.Helper;
+using Newtonsoft.Json;
 
 
 namespace SpaceMission
@@ -16,6 +17,22 @@ namespace SpaceMission
         private static ResourceManager rm = new ResourceManager("SpaceMission.LanguageResources.Messages", typeof(Program).Assembly);
         static void Main(string[] args)
         {
+
+            Dictionary<string, WeatherCriteria> spaceportCriteria = LoadCriteriaFromFile();
+
+            // Check if the loaded criteria are empty and initialize them if they are
+            if (spaceportCriteria.Count == 0)
+            {
+                // Correctly initialize the dictionary with new entries
+                spaceportCriteria = new Dictionary<string, WeatherCriteria>
+    {
+        { "Kourou, French Guyana", new WeatherCriteria() },
+        { "Cape Canaveral, USA", new WeatherCriteria() },
+        { "Mahia, New Zealand", new WeatherCriteria() },
+        { "Kodiak, USA", new WeatherCriteria() },
+        { "Tanegashima, Japan", new WeatherCriteria() }
+    };
+            }
             Console.WriteLine("Choose language: 1 for English, 2 for German");
             Console.WriteLine("The German translation was done with Google translate, so I apologize if there are any mistakes.");
             var languageChoice = Console.ReadLine();
@@ -150,16 +167,22 @@ namespace SpaceMission
         }
       
 
-        private static Dictionary<string, WeatherCriteria> spaceportCriteria = new Dictionary<string, WeatherCriteria>
-    {
-        { "Kourou, French Guyana", new WeatherCriteria() },
-        { "Cape Canaveral, USA", new WeatherCriteria() },
-        { "Mahia, New Zealand", new WeatherCriteria() },
-        { "Kodiak, USA", new WeatherCriteria() },
-        { "Tanegashima, Japan", new WeatherCriteria() }
-    };
-        
 
+
+        private static Dictionary<string, WeatherCriteria> LoadCriteriaFromFile()
+        {
+            string filePath = "WeatherCriteria.json";
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                return JsonConvert.DeserializeObject<Dictionary<string, WeatherCriteria>>(json);
+            }
+            else
+            {
+                // Return default criteria or handle the case where the file doesn't exist
+                return new Dictionary<string, WeatherCriteria>();
+            }
+        }
 
 
 

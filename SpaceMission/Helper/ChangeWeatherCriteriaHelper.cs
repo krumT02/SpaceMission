@@ -1,4 +1,5 @@
-﻿using SpaceMission.WeatherClasses;
+﻿using Newtonsoft.Json;
+using SpaceMission.WeatherClasses;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -47,6 +48,10 @@ namespace SpaceMission.Helper
                 WeatherCriteria criteria = spaceportCriteria[selectedSpaceport];
                 Console.WriteLine(rm.GetString("UpdatingCriteria", ci) + selectedSpaceport);
                 UpdateCriteria(criteria);
+                Console.WriteLine("Save to file y/n?");
+                string answear = Console.ReadLine();
+                if(answear == "y") 
+                SaveCriteriaToFile(spaceportCriteria);
             }
         }
 
@@ -61,6 +66,8 @@ namespace SpaceMission.Helper
             criteria.AllowedCloudTypes = ReadListFromConsole(rm.GetString("CloudTypes", ci), criteria.AllowedCloudTypes);
 
             Console.WriteLine(rm.GetString("CriteriaUpdateW", ci));
+            
+
         }
 
         private int ReadIntFromConsole(string prompt, int currentValue)
@@ -116,6 +123,13 @@ namespace SpaceMission.Helper
                     return inputs;  // Return the list of valid inputs
                 }
             }
+        }
+        private static void SaveCriteriaToFile(Dictionary<string, WeatherCriteria> spaceportCriteria)
+        {
+            string filePath = "WeatherCriteria.json";
+            string json = JsonConvert.SerializeObject(spaceportCriteria, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+            Console.WriteLine("Weather criteria saved successfully.");
         }
     }
 }
