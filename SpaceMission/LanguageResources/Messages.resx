@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalMessage" xml:space="preserve">
+    <value>Enter additional message:</value>
+  </data>
+  <data name="BestDay" xml:space="preserve">
+    <value>Best day for launch is Day {0} at {1}.</value>
+  </data>
+  <data name="ChooseOption" xml:space="preserve">
+    <value>Choose what to do:</value>
+  </data>
+  <data name="CloudTypes" xml:space="preserve">
+    <value>Enter allowed cloud types: Cirrus, Cumulus, Stratus, Nimbus (comma-separated, empty for no restriction)</value>
+  </data>
+  <data name="CriteriaUpdateW" xml:space="preserve">
+    <value>Criteria updated successfully.</value>
+  </data>
+  <data name="CSVFileL" xml:space="preserve">
+    <value>Failed to write CSV file.</value>
+  </data>
+  <data name="CSVFileW" xml:space="preserve">
+    <value>CSV file written successfully.</value>
+  </data>
+  <data name="EmailCanceled" xml:space="preserve">
+    <value>Email sending canceled.</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>Wrong email format!</value>
+  </data>
+  <data name="EmailSendW" xml:space="preserve">
+    <value>Email sent successfully!</value>
+  </data>
+  <data name="FailSendEmail" xml:space="preserve">
+    <value>Failed to send email. Try again? Y/N</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found:</value>
+  </data>
+  <data name="HelloWelcome" xml:space="preserve">
+    <value>Hello, Welcome to SPACE mission control centre</value>
+  </data>
+  <data name="IndexOutOfRange" xml:space="preserve">
+    <value>Index out of range or invalid:  </value>
+  </data>
+  <data name="InvalidChoice" xml:space="preserve">
+    <value>Invalid choice. Please select a valid option.</value>
+  </data>
+  <data name="InvalidCloudTypes" xml:space="preserve">
+    <value>Invalid cloud types: {0}. Valid types include: {1}.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Invalid input.</value>
+  </data>
+  <data name="Lighting" xml:space="preserve">
+    <value>Allow lightning?</value>
+  </data>
+  <data name="LocChooice" xml:space="preserve">
+    <value>Select location files to consider for launch (comma-separated):</value>
+  </data>
+  <data name="MaxHumidity" xml:space="preserve">
+    <value>Enter maximum humidity</value>
+  </data>
+  <data name="MaxTemp" xml:space="preserve">
+    <value>Enter maximum temperature</value>
+  </data>
+  <data name="MaxWind" xml:space="preserve">
+    <value>Enter maximum wind speed</value>
+  </data>
+  <data name="MinTemp" xml:space="preserve">
+    <value>Enter minimum temperature</value>
+  </data>
+  <data name="NoSuitableDay" xml:space="preserve">
+    <value>No suitable launch day found.</value>
+  </data>
+  <data name="Option1" xml:space="preserve">
+    <value>1. Choose best day and port for launch.</value>
+  </data>
+  <data name="Option2" xml:space="preserve">
+    <value>2. Change Weather Criteria.</value>
+  </data>
+  <data name="Option3" xml:space="preserve">
+    <value>3. Exit.</value>
+  </data>
+  <data name="Precipation" xml:space="preserve">
+    <value>Allow precipitation?</value>
+  </data>
+  <data name="RecipientEmail" xml:space="preserve">
+    <value>Enter recipient Email:</value>
+  </data>
+  <data name="SenderEmail" xml:space="preserve">
+    <value>Enter sender Email:</value>
+  </data>
+  <data name="SenderPassword" xml:space="preserve">
+    <value>Enter sender Email password:</value>
+  </data>
+  <data name="SpaceAnalysisReport" xml:space="preserve">
+    <value>Space Shuttle Launch Analysis Report</value>
+  </data>
+  <data name="SpaceportUpdate" xml:space="preserve">
+    <value>Select the spaceports to update their criteria (comma-separated indices):</value>
+  </data>
+  <data name="UpdatingCriteria" xml:space="preserve">
+    <value>Updating criteria for: </value>
+  </data>
+  <data name="ValidTypes" xml:space="preserve">
+    <value>Please enter valid cloud types:</value>
+  </data>
+</root>
