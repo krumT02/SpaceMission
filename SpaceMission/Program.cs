@@ -55,14 +55,19 @@ namespace SpaceMission
         {
             WeatherAnalyzer analyzer = new WeatherAnalyzer();
             string[] locations = { "Kourou, French Guyana", "Cape Canaveral, USA", "Mahia, New Zealand", "Kodiak, USA", "Tanegashima, Japan" };
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Adjusting basePath to point to the project root from the bin folder
+            string adjustedBasePath = Path.GetFullPath(Path.Combine(basePath, @"..\..\.."));
+
             Dictionary<string, string> locationFiles = new Dictionary<string, string>
-        {
-            { "Kourou, French Guyana", "LocationsWeatherReports\\Kourou, French Guyana.csv" },
-            { "Cape Canaveral, USA", "LocationsWeatherReports\\Cape Canaveral, USA.csv" },
-            { "Mahia, New Zealand", "LocationsWeatherReports\\Mahia, New Zealand.csv" },
-            { "Kodiak, USA", "LocationsWeatherReports\\Kodiak, USA.csv" },
-            { "Tanegashima, Japan", "LocationsWeatherReports\\Tanegashima, Japan.csv" }
-        };
+            {
+                 { "Kourou, French Guyana", Path.Combine(adjustedBasePath, @"LocationsWeatherReports\Kourou, French Guyana.csv") },
+                 { "Cape Canaveral, USA", Path.Combine(adjustedBasePath, @"LocationsWeatherReports\Cape Canaveral, USA.csv") },
+                 { "Mahia, New Zealand", Path.Combine(adjustedBasePath, @"LocationsWeatherReports\Mahia, New Zealand.csv") },
+                 { "Kodiak, USA", Path.Combine(adjustedBasePath, @"LocationsWeatherReports\Kodiak, USA.csv") },
+                 { "Tanegashima, Japan", Path.Combine(adjustedBasePath, @"LocationsWeatherReports\Tanegashima, Japan.csv") }
+            };
 
             List<WeatherForecast> allForecasts = new List<WeatherForecast>();
             Console.WriteLine(rm.GetString("LocChooice",ci));

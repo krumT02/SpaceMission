@@ -1,0 +1,7 @@
+Day/Parameter;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15
+Temperature;25;26;27;28;29;30;31;30;29;28;27;26;25;24;23
+Wind (m/s);14;13;15;16;15;14;13;12;11;10;9;8;7;6;5
+Humidity(%);65;67;69;70;72;74;76;75;73;71;69;67;65;63;61
+Precipitation(%);5;0;0;0;0;0;5;10;15;20;25;30;20;10;0
+Lighting;No;No;No;Yes;No;Yes;Yes;No;Yes;No;No;Yes;No;No;No
+Clouds;Cumulus;Cumulus;Stratus;Stratus;Stratus;Nimbus;Nimbus;Stratus;Cumulus;Cirrus;Cumulus;Stratus;Cirrus;Cirrus;Cumulus
