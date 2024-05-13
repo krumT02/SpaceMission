@@ -79,7 +79,7 @@ namespace SpaceMission.Helper
                 {
                     return result;
                 }
-                Console.WriteLine("Invalid input, please enter a valid number.");
+                Console.WriteLine(rm.GetString("InvalidInput",ci));
             }
         }
 
@@ -91,7 +91,7 @@ namespace SpaceMission.Helper
                 var input = Console.ReadLine().Trim().ToLower();
                 if (input == "yes") return true;
                 if (input == "no") return false;
-                Console.WriteLine("Invalid input, please enter 'yes' or 'no'.");
+                Console.WriteLine(rm.GetString("InvalidInput",ci));
             }
         }
 
